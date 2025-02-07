@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Rose Day, Ananya!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: url('https://media.istockphoto.com/id/533154641/vector/seamless-pattern-with-red-roses.jpg?s=612x612&w=0&k=20&c=No2VKtrYODPE-QC69TO6SrC5Q_--RR0w1Zu0H_IK3Hw=') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: crimson;
+      animation: colorPulse 2s infinite;
+    }
+
+    .rose {
+      position: relative;
+      margin: 20px auto;
+      width: 100px;
+      height: 100px;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1jZpoS7D8YLrTX9k4N7oQqn0utSEzzl5Lw&s') no-repeat center center;
+      background-size: contain;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background: crimson;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: darkred;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes colorPulse {
+      0% {
+        color: crimson;
+      }
+      50% {
+        color: pink;
+      }
+      100% {
+        color: crimson;
+      }
+    }
+
+    @keyframes showRose {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes pageTransition {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    function showRose() {
+      const roseElement = document.querySelector('.rose');
+      roseElement.style.opacity = '1';
+      roseElement.style.transform = 'scale(1)';
+      roseElement.style.animation = 'showRose 2s forwards';
+      setTimeout(() => window.location.href = 'page2.html', 3000);
+    }
+  </script>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Rose Day, Ananya!</h1>
+    <button class="btn" onclick="showRose()">Click for a Rose 🌹</button>
+    <div class="rose"></div>
+    <p> online cringe  ❤️</p>
+  </div>
+</body>
+</html>
+
